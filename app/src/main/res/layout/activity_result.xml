@@ -1,60 +1,75 @@
-
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    style="@style/container_master">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".FormActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        style="@style/container_master">
 
 
-    <ImageView
-        style="@style/banner"/>
+        <ImageView style="@style/banner" />
 
-    <View style="@style/divider"/>
-
-    <TextView
-        style="@style/header_title"
-        android:drawableStart="@drawable/analysis_icon"
-        android:text="Sugestão de Abastecimento"/>
-
-    <View style="@style/divider"/>
-
-    <TextView
-        style="@style/header_title"
-        tools:text="Etanol"
-        android:textSize="48sp"
-        android:gravity="center" android:id="@+id/tvSuggestion"/>
-
-
-    <View style="@style/divider"/>
-
-    <TextView
-        android:drawableStart="@drawable/coins_icon"
-        android:text="Gasto/Km"
-        style="@style/header_title"/>
-
-    <View style="@style/divider"/>
-
-    <LinearLayout style="@style/container_row">
+        <View style="@style/divider" />
 
         <TextView
-            style="@style/value_spent_footer"
-            tools:text="0.30" android:id="@+id/tvGasAverageResult"/>
+            style="@style/header_title"
+            android:drawableStart="@drawable/analysis_icon"
+            android:text="Sugestão de Abastecimento" />
+
+        <View style="@style/divider" />
 
         <TextView
-            style="@style/value_spent_footer"
-            tools:text="0.30" android:id="@+id/tvEthanolAverageResult"/>
+            android:id="@+id/tvSuggestion"
+            style="@style/header_title"
+            android:gravity="center"
+            android:textSize="48sp"
+            tools:text="Etanol" />
+
+        <TextView
+            android:id="@+id/tvFuelRatio"
+            style="@style/header_subtitle"
+            android:gravity="center"
+            android:text="@string/label_ration_fuel"
+            android:textStyle="normal" />
+
+
+        <View style="@style/divider" />
+
+        <TextView
+            style="@style/header_title"
+            android:drawableStart="@drawable/coins_icon"
+            android:text="Gasto/Km" />
+
+        <View style="@style/divider" />
+
+        <LinearLayout style="@style/container_row">
+
+            <TextView
+                android:id="@+id/tvGasAverageResult"
+                style="@style/value_spent_footer"
+                tools:text="0.30" />
+
+            <TextView
+                android:id="@+id/tvEthanolAverageResult"
+                style="@style/value_spent_footer"
+                tools:text="0.30" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/container_row">
+
+            <TextView
+                style="@style/label_spent_footer"
+                android:text="Gasolina" />
+
+            <TextView
+                style="@style/label_spent_footer"
+                android:text="Etanol" />
+        </LinearLayout>
+
     </LinearLayout>
-
-    <LinearLayout style="@style/container_row">
-
-        <TextView
-            style="@style/label_spent_footer"
-            android:text="Gasolina"
-            />
-
-        <TextView
-            style="@style/label_spent_footer"
-            android:text="Etanol"/>
-    </LinearLayout>
-
-</LinearLayout>
+</ScrollView>
