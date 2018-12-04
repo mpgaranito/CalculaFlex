@@ -1,0 +1,1 @@
+https://github.com/heiderlopes/android-animacao/tree/master/app/src/main/res/anim

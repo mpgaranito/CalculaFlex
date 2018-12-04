@@ -7,7 +7,7 @@
     tools:context=".SplashActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/ivLogo"
         android:layout_width="124dp"
         android:layout_height="156dp"
         android:layout_marginBottom="8dp"
